@@ -1,0 +1,30 @@
+
+Log Entry : 
+03/27/2014 14:08:14
+Error in: http://localhost:34694/BackOffice/UserDetail.aspx?id=6. Error Message:Error: The user '110023' is already in role 'Administrator'.
+__________________________
+
+Log Entry : 
+03/27/2014 14:08:47
+Error in: http://localhost:34694/BackOffice/UserDetail.aspx?id=6. Error Message:Error: The user '110023' is already in role 'DeptApprover'.
+__________________________
+
+Log Entry : 
+03/27/2014 14:11:59
+Error in: http://localhost:34694/BackOffice/UserDetail.aspx?id=6. Error Message:Error: The user '110023' is already in role 'DeptApprover'.
+__________________________
+
+Log Entry : 
+03/27/2014 14:16:20
+Error in: http://localhost:34694/BackOffice/UserDetail.aspx?id=6. Error Message:Error: The user '110023' is already in role 'DeptApprover'.
+__________________________
+
+Log Entry : 
+03/27/2014 14:18:07
+Error in: http://localhost:34694/BackOffice/UserDetail.aspx?id=6. Error Message:Error: The user '110023' is already in role 'DeptApprover'.
+__________________________
+
+Log Entry : 
+03/27/2014 14:18:48
+Error in: http://localhost:34694/BackOffice/UserDetail.aspx?id=6. Error Message:Error: The user '110023' is already in role 'GssAdmin'.
+__________________________

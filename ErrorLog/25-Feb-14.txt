@@ -1,0 +1,32 @@
+
+Log Entry : 
+02/25/2014 11:03:11
+Error in: http://localhost:24949/BackOffice/UserSetup.aspx. Error Message:Error Msg: Schema specified is not valid. Errors: 
+FleetMgt.ssdl(2,2) : error 0152: No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+__________________________
+
+Log Entry : 
+02/25/2014 11:10:27
+Error in: http://localhost:24949/BackOffice/UserSetup.aspx. Error Message:Error Msg: Unable to load the specified metadata resource.
+__________________________
+
+Log Entry : 
+02/25/2014 11:11:55
+Error in: http://localhost:24949/BackOffice/UserSetup.aspx. Error Message:Error Msg: Schema specified is not valid. Errors: 
+FleetMgt.ssdl(2,2) : error 0152: No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+__________________________
+
+Log Entry : 
+02/25/2014 11:14:06
+Error in: http://localhost:24949/BackOffice/UserSetup.aspx. Error Message:Error Msg: Format of the initialization string does not conform to specification starting at index 105.
+__________________________
+
+Log Entry : 
+02/25/2014 11:15:39
+Error in: http://localhost:24949/BackOffice/UserSetup.aspx. Error Message:Error Msg: An error occurred while updating the entries. See the inner exception for details.
+__________________________
+
+Log Entry : 
+02/25/2014 11:19:49
+Error in: http://localhost:24949/BackOffice/UserSetup.aspx. Error Message:Error Msg: An error occurred while updating the entries. See the inner exception for details.
+__________________________

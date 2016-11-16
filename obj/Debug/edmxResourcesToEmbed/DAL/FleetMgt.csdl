@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FleetMgtSysDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="FleetMgtSysDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departments" EntityType="FleetMgtSysDBModel.Department" />
+    <EntitySet Name="Drivers" EntityType="FleetMgtSysDBModel.Driver" />
+    <EntitySet Name="DriverEmployers" EntityType="FleetMgtSysDBModel.DriverEmployer" />
+    <EntitySet Name="IncidentLogs" EntityType="FleetMgtSysDBModel.IncidentLog" />
+    <EntitySet Name="InsuranceCompanies" EntityType="FleetMgtSysDBModel.InsuranceCompany" />
+    <EntitySet Name="TrackerCompanies" EntityType="FleetMgtSysDBModel.TrackerCompany" />
+    <EntitySet Name="Trips" EntityType="FleetMgtSysDBModel.Trip" />
+    <EntitySet Name="Users" EntityType="FleetMgtSysDBModel.User" />
+    <EntitySet Name="Vehicles" EntityType="FleetMgtSysDBModel.Vehicle" />
+    <EntitySet Name="VehicleIncidenceTypes" EntityType="FleetMgtSysDBModel.VehicleIncidenceType" />
+    <EntitySet Name="VehicleMakers" EntityType="FleetMgtSysDBModel.VehicleMaker" />
+    <EntitySet Name="VehicleTypes" EntityType="FleetMgtSysDBModel.VehicleType" />
+    <AssociationSet Name="FK_Trip_Department" Association="FleetMgtSysDBModel.FK_Trip_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Department" Association="FleetMgtSysDBModel.FK_User_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Driver_DriverEmployer" Association="FleetMgtSysDBModel.FK_Driver_DriverEmployer">
+      <End Role="DriverEmployer" EntitySet="DriverEmployers" />
+      <End Role="Driver" EntitySet="Drivers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Driver_Vehicle" Association="FleetMgtSysDBModel.FK_Driver_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicles" />
+      <End Role="Driver" EntitySet="Drivers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentLog_Driver" Association="FleetMgtSysDBModel.FK_IncidentLog_Driver">
+      <End Role="Driver" EntitySet="Drivers" />
+      <End Role="IncidentLog" EntitySet="IncidentLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_Driver" Association="FleetMgtSysDBModel.FK_Vehicle_Driver">
+      <End Role="Driver" EntitySet="Drivers" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentLog_VehicleIncidenceType" Association="FleetMgtSysDBModel.FK_IncidentLog_VehicleIncidenceType">
+      <End Role="VehicleIncidenceType" EntitySet="VehicleIncidenceTypes" />
+      <End Role="IncidentLog" EntitySet="IncidentLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_InsuranceCompany" Association="FleetMgtSysDBModel.FK_Vehicle_InsuranceCompany">
+      <End Role="InsuranceCompany" EntitySet="InsuranceCompanies" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_TrackerCompany" Association="FleetMgtSysDBModel.FK_Vehicle_TrackerCompany">
+      <End Role="TrackerCompany" EntitySet="TrackerCompanies" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trip_User" Association="FleetMgtSysDBModel.FK_Trip_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trip_User1" Association="FleetMgtSysDBModel.FK_Trip_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trip_User2" Association="FleetMgtSysDBModel.FK_Trip_User2">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trip_Vehicle" Association="FleetMgtSysDBModel.FK_Trip_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicles" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_VehicleMaker" Association="FleetMgtSysDBModel.FK_Vehicle_VehicleMaker">
+      <End Role="VehicleMaker" EntitySet="VehicleMakers" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_VehicleType" Association="FleetMgtSysDBModel.FK_Vehicle_VehicleType">
+      <End Role="VehicleType" EntitySet="VehicleTypes" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Trips" Relationship="FleetMgtSysDBModel.FK_Trip_Department" FromRole="Department" ToRole="Trip" />
+    <NavigationProperty Name="Users" Relationship="FleetMgtSysDBModel.FK_User_Department" FromRole="Department" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="400" Unicode="false" FixedLength="false" />
+    <Property Name="DateEmployed" Type="DateTime" />
+    <Property Name="MobileNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EmployerID" Type="Int32" />
+    <Property Name="VehicleAssociate" Type="Int32" />
+    <NavigationProperty Name="DriverEmployer" Relationship="FleetMgtSysDBModel.FK_Driver_DriverEmployer" FromRole="Driver" ToRole="DriverEmployer" />
+    <NavigationProperty Name="Vehicle" Relationship="FleetMgtSysDBModel.FK_Driver_Vehicle" FromRole="Driver" ToRole="Vehicle" />
+    <NavigationProperty Name="IncidentLogs" Relationship="FleetMgtSysDBModel.FK_IncidentLog_Driver" FromRole="Driver" ToRole="IncidentLog" />
+    <NavigationProperty Name="Vehicles" Relationship="FleetMgtSysDBModel.FK_Vehicle_Driver" FromRole="Driver" ToRole="Vehicle" />
+  </EntityType>
+  <EntityType Name="DriverEmployer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Drivers" Relationship="FleetMgtSysDBModel.FK_Driver_DriverEmployer" FromRole="DriverEmployer" ToRole="Driver" />
+  </EntityType>
+  <EntityType Name="IncidentLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IncidentTypeID" Type="Int32" />
+    <Property Name="DateAdded" Type="DateTime" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AssociatedDriver" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Driver" Relationship="FleetMgtSysDBModel.FK_IncidentLog_Driver" FromRole="IncidentLog" ToRole="Driver" />
+    <NavigationProperty Name="VehicleIncidenceType" Relationship="FleetMgtSysDBModel.FK_IncidentLog_VehicleIncidenceType" FromRole="IncidentLog" ToRole="VehicleIncidenceType" />
+  </EntityType>
+  <EntityType Name="InsuranceCompany">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Vehicles" Relationship="FleetMgtSysDBModel.FK_Vehicle_InsuranceCompany" FromRole="InsuranceCompany" ToRole="Vehicle" />
+  </EntityType>
+  <EntityType Name="TrackerCompany">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Vehicles" Relationship="FleetMgtSysDBModel.FK_Vehicle_TrackerCompany" FromRole="TrackerCompany" ToRole="Vehicle" />
+  </EntityType>
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Destination" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Purpose" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="DateAdded" Type="DateTime" />
+    <Property Name="ExpectedDepartureTime" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ExpectedReturnTime" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="InitiatorID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="InitiatorName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="ApproverIDLeve1" Type="Int32" />
+    <Property Name="ApproverIDlevel2" Type="Int32" />
+    <Property Name="DateApproved" Type="DateTime" />
+    <Property Name="AssignedBy" Type="Int32" />
+    <Property Name="DateAssigned" Type="DateTime" />
+    <Property Name="AssignedVehicle" Type="Int32" />
+    <Property Name="MileageAtDeparture" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MileageOnArrival" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="priority" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Department" Relationship="FleetMgtSysDBModel.FK_Trip_Department" FromRole="Trip" ToRole="Department" />
+    <NavigationProperty Name="User" Relationship="FleetMgtSysDBModel.FK_Trip_User" FromRole="Trip" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="FleetMgtSysDBModel.FK_Trip_User1" FromRole="Trip" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="FleetMgtSysDBModel.FK_Trip_User2" FromRole="Trip" ToRole="User" />
+    <NavigationProperty Name="Vehicle" Relationship="FleetMgtSysDBModel.FK_Trip_Vehicle" FromRole="Trip" ToRole="Vehicle" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaffID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="StaffName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="RoleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Department" Relationship="FleetMgtSysDBModel.FK_User_Department" FromRole="User" ToRole="Department" />
+    <NavigationProperty Name="Trips" Relationship="FleetMgtSysDBModel.FK_Trip_User" FromRole="User" ToRole="Trip" />
+    <NavigationProperty Name="Trips1" Relationship="FleetMgtSysDBModel.FK_Trip_User1" FromRole="User" ToRole="Trip" />
+    <NavigationProperty Name="Trips2" Relationship="FleetMgtSysDBModel.FK_Trip_User2" FromRole="User" ToRole="Trip" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MarkerID" Type="Int32" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="Mileage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AssociatedDriver" Type="Int32" />
+    <Property Name="PlateNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LicenseNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LicenseExprDate" Type="DateTime" />
+    <Property Name="InsuranceNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="InsuranceExprDate" Type="DateTime" />
+    <Property Name="InsuranceCompany" Type="Int32" />
+    <Property Name="TrackerCompany" Type="Int32" />
+    <NavigationProperty Name="Drivers" Relationship="FleetMgtSysDBModel.FK_Driver_Vehicle" FromRole="Vehicle" ToRole="Driver" />
+    <NavigationProperty Name="Driver" Relationship="FleetMgtSysDBModel.FK_Vehicle_Driver" FromRole="Vehicle" ToRole="Driver" />
+    <NavigationProperty Name="InsuranceCompany1" Relationship="FleetMgtSysDBModel.FK_Vehicle_InsuranceCompany" FromRole="Vehicle" ToRole="InsuranceCompany" />
+    <NavigationProperty Name="TrackerCompany1" Relationship="FleetMgtSysDBModel.FK_Vehicle_TrackerCompany" FromRole="Vehicle" ToRole="TrackerCompany" />
+    <NavigationProperty Name="Trips" Relationship="FleetMgtSysDBModel.FK_Trip_Vehicle" FromRole="Vehicle" ToRole="Trip" />
+    <NavigationProperty Name="VehicleMaker" Relationship="FleetMgtSysDBModel.FK_Vehicle_VehicleMaker" FromRole="Vehicle" ToRole="VehicleMaker" />
+    <NavigationProperty Name="VehicleType" Relationship="FleetMgtSysDBModel.FK_Vehicle_VehicleType" FromRole="Vehicle" ToRole="VehicleType" />
+  </EntityType>
+  <EntityType Name="VehicleIncidenceType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="IncidentLogs" Relationship="FleetMgtSysDBModel.FK_IncidentLog_VehicleIncidenceType" FromRole="VehicleIncidenceType" ToRole="IncidentLog" />
+  </EntityType>
+  <EntityType Name="VehicleMaker">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Vehicles" Relationship="FleetMgtSysDBModel.FK_Vehicle_VehicleMaker" FromRole="VehicleMaker" ToRole="Vehicle" />
+  </EntityType>
+  <EntityType Name="VehicleType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Vehicles" Relationship="FleetMgtSysDBModel.FK_Vehicle_VehicleType" FromRole="VehicleType" ToRole="Vehicle" />
+  </EntityType>
+  <Association Name="FK_Trip_Department">
+    <End Role="Department" Type="FleetMgtSysDBModel.Department" Multiplicity="0..1" />
+    <End Role="Trip" Type="FleetMgtSysDBModel.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Department">
+    <End Role="Department" Type="FleetMgtSysDBModel.Department" Multiplicity="0..1" />
+    <End Role="User" Type="FleetMgtSysDBModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Driver_DriverEmployer">
+    <End Role="DriverEmployer" Type="FleetMgtSysDBModel.DriverEmployer" Multiplicity="0..1" />
+    <End Role="Driver" Type="FleetMgtSysDBModel.Driver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DriverEmployer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Driver">
+        <PropertyRef Name="EmployerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Driver_Vehicle">
+    <End Role="Vehicle" Type="FleetMgtSysDBModel.Vehicle" Multiplicity="0..1" />
+    <End Role="Driver" Type="FleetMgtSysDBModel.Driver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Driver">
+        <PropertyRef Name="VehicleAssociate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentLog_Driver">
+    <End Role="Driver" Type="FleetMgtSysDBModel.Driver" Multiplicity="0..1" />
+    <End Role="IncidentLog" Type="FleetMgtSysDBModel.IncidentLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IncidentLog">
+        <PropertyRef Name="AssociatedDriver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_Driver">
+    <End Role="Driver" Type="FleetMgtSysDBModel.Driver" Multiplicity="0..1" />
+    <End Role="Vehicle" Type="FleetMgtSysDBModel.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="AssociatedDriver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentLog_VehicleIncidenceType">
+    <End Role="VehicleIncidenceType" Type="FleetMgtSysDBModel.VehicleIncidenceType" Multiplicity="0..1" />
+    <End Role="IncidentLog" Type="FleetMgtSysDBModel.IncidentLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleIncidenceType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IncidentLog">
+        <PropertyRef Name="IncidentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_InsuranceCompany">
+    <End Role="InsuranceCompany" Type="FleetMgtSysDBModel.InsuranceCompany" Multiplicity="0..1" />
+    <End Role="Vehicle" Type="FleetMgtSysDBModel.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InsuranceCompany">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="InsuranceCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_TrackerCompany">
+    <End Role="TrackerCompany" Type="FleetMgtSysDBModel.TrackerCompany" Multiplicity="0..1" />
+    <End Role="Vehicle" Type="FleetMgtSysDBModel.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrackerCompany">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="TrackerCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trip_User">
+    <End Role="User" Type="FleetMgtSysDBModel.User" Multiplicity="0..1" />
+    <End Role="Trip" Type="FleetMgtSysDBModel.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="ApproverIDLeve1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trip_User1">
+    <End Role="User" Type="FleetMgtSysDBModel.User" Multiplicity="0..1" />
+    <End Role="Trip" Type="FleetMgtSysDBModel.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="ApproverIDlevel2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trip_User2">
+    <End Role="User" Type="FleetMgtSysDBModel.User" Multiplicity="0..1" />
+    <End Role="Trip" Type="FleetMgtSysDBModel.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="AssignedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trip_Vehicle">
+    <End Role="Vehicle" Type="FleetMgtSysDBModel.Vehicle" Multiplicity="0..1" />
+    <End Role="Trip" Type="FleetMgtSysDBModel.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="AssignedVehicle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_VehicleMaker">
+    <End Role="VehicleMaker" Type="FleetMgtSysDBModel.VehicleMaker" Multiplicity="0..1" />
+    <End Role="Vehicle" Type="FleetMgtSysDBModel.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleMaker">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="MarkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_VehicleType">
+    <End Role="VehicleType" Type="FleetMgtSysDBModel.VehicleType" Multiplicity="0..1" />
+    <End Role="Vehicle" Type="FleetMgtSysDBModel.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

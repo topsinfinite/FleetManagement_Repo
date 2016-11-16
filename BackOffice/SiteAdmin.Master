@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdmin.master.cs" Inherits="FleetMgtSolution.SiteAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+   <meta charset="utf-8">
+  <title>AMCON Fleet Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/ModelPopup.css" rel="stylesheet" type="text/css" />
+<link type="text/css" href="../css/bootstrap-timepicker.min.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="./js/html5shiv.js"></script>
+<![endif]-->
+ <script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../js/action.js" type="text/javascript"></script>
+<script src="../js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="form1" runat="server" style="margin-bottom:0px">
+  <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
+  </asp:ScriptManager>
+  <div id="header">
+  <div class="container-fluid">
+   <div class="row-fluid hidden-phone">
+    <div class="span7">
+      <a href="http://amconportal/" target="_blank"> <img src="../img/AmconLogoTrans.png" /></a>  <a href="../Default.aspx"><img src="../img/easyfleetlogo.png" /></a>
+    </div>
+    <div class="span5 pull-right right action-links">
+    <%--<span class="name">Hi, Fatayo Tope</span>
+     <ul>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Sign Out</a></li>
+     </ul>--%>
+     <asp:LoginView ID="LoginView1" runat="server">
+        <AnonymousTemplate>
+           <%--<ul class="login">
+              <li><a href="../Login.aspx">Sign-In</a></li>
+              <li> <a href="#">SetUp Bidding Account </a>
+                  </li>
+             </ul>--%>
+        </AnonymousTemplate>
+        <LoggedInTemplate>
+           <span class="name">Hi, 
+               <asp:Label ID="lbFName" runat="server" Text=""></asp:Label>
+               <%----%>
+                </span>
+             <ul class="login">
+              <li><asp:Label ID="lbRole" runat="server" Text=""></asp:Label></li>
+              <li><asp:LoginStatus ID="LoginStatus1" LoginText="Sign Out" runat="server" />
+                  </li>
+             </ul>
+        </LoggedInTemplate>
+        </asp:LoginView>
+    </div>
+     
+   </div>
+   <div class="row-fluid visible-phone">
+    <div class="span12">
+     <a href="../Default.aspx" class="logo-mobile"><img src="../img/easyfleetlogo.png"></a>
+     <button type="button" class="mobile-nav" data-toggle="collapse" data-target=".nav-collapse">
+     </button>
+     <div class="nav-collapse collapse">
+      <ul class="nav">
+         <li class="nav-header">BackOffice Management</li>
+         <li><a href="ManageFleetRequest.aspx">Manage Fleet Request</a></li>
+          <li><a href="ManageVehicle.aspx">Manage Vehicle</a></li>
+         <li><a href="ManageDriver.aspx">Manage Driver</a></li>
+          <li><a href="ManageIncidence.aspx">Incidence/Vehicle Maintenance</a></li>
+         <li class="divider"></li>
+         <li class="nav-header">Application Setup</li>
+         <li><a href="ManageDept.aspx">Setup Department</a></li>
+         <li><a href="LookUpForms.aspx">Setup LookUp Forms</a></li>
+         <li class="divider"></li>
+       
+         <li class="nav-header">Users Management</li>
+         <li >
+             <asp:HyperLink ID="lnkUsrMgt" runat="server"  NavigateUrl="UserSetup.aspx">Manage User</asp:HyperLink><%--<a href="UserSetup.aspx"  >Manage User</a>--%></li>
+        
+         <li class="divider"></li>  
+         <li class="nav-header">Reports</li>
+         <li><a href="DashBoard.aspx">DashBoard</a></li>
+         <li><a href="ReportHome.aspx">Fleet Reports</a></li>
+      </ul>
+     </div>
+    </div>
+    </div>
+   </div>
+  </div>
+  <div id="nav" class="hidden-phone">
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <ul class="span7">
+    <li>EasyFleet Administration</li>
+    </ul>
+    <div class="span5 pull-right brand right"><a href="../Default.aspx">Front Office</a></div>
+   </div>
+  </div>
+ </div>
+      <asp:ContentPlaceHolder ID="bannerContent" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <%--<div id="site-content"> --%> 
+   <div class="container-fluid full-width"> 
+   
+    <div class="row-fluid">
+    <div id="sidebar" class="span3">
+      <ul class="nav nav-list">
+          <li class="nav-header">BackOffice Management</li>
+         <li><a href="ManageFleetRequest.aspx">Manage Fleet Request</a></li>
+          <li><a href="ManageVehicle.aspx">Manage Vehicle</a></li>
+         <li><a href="ManageDriver.aspx">Manage Driver</a></li>
+          <li><a href="ManageIncidence.aspx">Incidence/Vehicle Maintenance</a></li>
+         <li class="divider"></li>
+         <li class="nav-header">Application Setup</li>
+         <li><a href="ManageDept.aspx">Setup Department</a></li>
+         <li><a href="LookUpForms.aspx">Setup LookUp Forms</a></li>
+         <li class="divider"></li>
+         <li class="nav-header">Users Management</li>
+         <li><a href="UserSetup.aspx">Manage User</a></li>
+         <li class="divider"></li>  
+         <li class="nav-header">Reports</li>
+         <li><a href="DashBoard.aspx">DashBoard</a></li>
+         <li><a href="ReportHome.aspx">Fleet Reports</a></li>
+    </ul>
+    </div>
+     <div class="span9" id="site-content-right" >
+       <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+     </div>
+     </div>
+     </div>
+  <%--</div>--%>
+        
+    <div id="footer">
+  <div class="container-fluid">
+   <div class="row-fluid">
+    <div class="span12" ><p class="text-center"><a href="http://www.amcon.com.ng">Asset Management Corporation of Nigeria (AMCON) &copy 2014 </a></p></div>
+   </div>
+  </div>
+ </div>
+ <script type="text/javascript">
+     $('#timepicker1').timepicker();
+     $('#timepicker2').timepicker();
+                         </script>
+    </form>
+</body>
+</html>

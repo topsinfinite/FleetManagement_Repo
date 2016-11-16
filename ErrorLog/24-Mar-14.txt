@@ -1,0 +1,53 @@
+
+Log Entry : 
+03/24/2014 14:34:45
+Error in: http://localhost:2193/Login.aspx. Error Message:Error: System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 172.20.10.8:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+__________________________
+
+Log Entry : 
+03/24/2014 14:35:14
+Error in: http://localhost:2193/Login.aspx. Error Message:Error: System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 172.20.10.8:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+__________________________
+
+Log Entry : 
+03/24/2014 14:37:23
+Error in: http://localhost:2193/Login.aspx. Error Message:Error: System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 172.20.10.8:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+__________________________
+
+Log Entry : 
+03/24/2014 14:41:45
+Error in: http://localhost:2193/BackOffice/FleetRequestDetail.aspx?id=1&status=4. Error Message:Error Msg: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. Refresh ObjectStateManager entries.
+__________________________
+
+Log Entry : 
+03/24/2014 14:42:19
+Error in: http://localhost:2193/BackOffice/FleetRequestDetail.aspx?id=1&status=4. Error Message:Error: System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. Refresh ObjectStateManager entries.
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ValidateRowsAffected(Int64 rowsAffected, UpdateCommand source)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction, Boolean throwOnClosedConnection)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update(Boolean throwOnClosedConnection)
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__b()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass9.<SaveChanges>b__6()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+__________________________
+
+Log Entry : 
+03/24/2014 15:07:53
+Error in: http://localhost:2193/BackOffice/FleetRequestDetail.aspx?id=1&status=4. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/24/2014 15:11:12
+Error in: http://localhost:2193/BackOffice/FleetRequestDetail.aspx?id=1&status=4. Error Message:Error: 
+__________________________

@@ -1,0 +1,16 @@
+
+Log Entry : 
+03/31/2014 10:49:59
+Error in: http://localhost:34694/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/31/2014 16:57:14
+Error in: http://localhost:34694/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/31/2014 16:59:20
+Error in: http://localhost:34694/BackOffice/UserDetail.aspx?id=3. Error Message:Error: The parameter 'roleName' must not be empty.
+Parameter name: roleName
+__________________________

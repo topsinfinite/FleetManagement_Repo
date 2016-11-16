@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+<title>Fleet Request Approval Notification</title>  
+</head>  
+<body>  
+<div>  
+<table width="600px" style="background:#BFCD33; padding:10px; font-weight:400;">  
+<tr>
+<td style="background:#5B6133"><img src="@add_appLogo" /></td>
+</tr>  
+<tr><td style="height: 230px; width: 600px;"><!--<p><span>Dear <strong> HeadDriver</strong></span>,</span></p>-->  
+<p><span></span></p><p style="margin: 0in 0in 0pt">--------------------------------------------------------------------------------------------------<br />  
+Fleet Request::  Details below for your action</p>  <br />
+<p style="margin: 0in 0in 0pt"> </p>  
+ <table border="0">
+   <tr>
+     <td>Initiator :- </td>
+     <td><b>@add_requestor</b>  </td>
+   </tr>
+   <tr>
+    <td>Priority:</td><td><span style="color:Maroon"><b>@priority</b></span></td>
+   </tr>
+   <tr>
+    <td>Destination :</td><td><b>@add_Destination</b></td>
+   </tr>
+   <tr>
+    <td>Purpose:</td><td><b>@add_purpose</b></td>
+   </tr>
+   <tr>
+    <td>Trip Date:</td><td><b>@add_tripDate</b>&nbsp;&nbsp; DepartureTime: <b>@add_DeptTime</b></td>
+   </tr>
+   <tr>
+    <td>Request Approver:</td><td><span style="color:Maroon"><b> @add_approver</b></span></td>
+   </tr>
+    <tr>
+    <td>Batch Number:</td><td><span style="color:Maroon"><b>@add_batch</b></span></td>
+   </tr>
+   <tr>
+   <td colspan="2"><span style="color:Maroon"><small>(all requests with the 
+        same batch number should be assign same vehicle)</small></span></td>
+   </tr>
+ </table>
+<p style="margin: 0in 0in 0pt"></p>
+    <p style="margin: 0in 0in 0pt">Kindly log on to <a href='@add_siteUrl'>easyFleet</a> to assign resources for this request</p>
+    <p style="margin: 0in 0in 0pt">&nbsp;</p>
+    <p style="margin: 0in 0in 0pt"> </p>
+  <br />
+    
+-------------------------------------------------------------------------------------------------- <br />  
+<span><br />Best Regards,<br />  
+easyFleet</span></td>  
+</tr>  
+</table>  
+</div>  
+</body>  
+</html> 
+

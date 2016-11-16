@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FleetMgtSysDBModelStoreContainer" CdmEntityContainer="FleetMgtSysDBEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drivers">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.Driver">
+        <MappingFragment StoreEntitySet="Driver">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DateEmployed" ColumnName="DateEmployed" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+          <ScalarProperty Name="VehicleAssociate" ColumnName="VehicleAssociate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverEmployers">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.DriverEmployer">
+        <MappingFragment StoreEntitySet="DriverEmployer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncidentLogs">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.IncidentLog">
+        <MappingFragment StoreEntitySet="IncidentLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IncidentTypeID" ColumnName="IncidentTypeID" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AssociatedDriver" ColumnName="AssociatedDriver" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceCompanies">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.InsuranceCompany">
+        <MappingFragment StoreEntitySet="InsuranceCompany">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrackerCompanies">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.TrackerCompany">
+        <MappingFragment StoreEntitySet="TrackerCompany">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trips">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.Trip">
+        <MappingFragment StoreEntitySet="Trip">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="ExpectedDepartureTime" ColumnName="ExpectedDepartureTime" />
+          <ScalarProperty Name="ExpectedReturnTime" ColumnName="ExpectedReturnTime" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="InitiatorID" ColumnName="InitiatorID" />
+          <ScalarProperty Name="InitiatorName" ColumnName="InitiatorName" />
+          <ScalarProperty Name="ApproverIDLeve1" ColumnName="ApproverIDLeve1" />
+          <ScalarProperty Name="ApproverIDlevel2" ColumnName="ApproverIDlevel2" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="AssignedBy" ColumnName="AssignedBy" />
+          <ScalarProperty Name="DateAssigned" ColumnName="DateAssigned" />
+          <ScalarProperty Name="AssignedVehicle" ColumnName="AssignedVehicle" />
+          <ScalarProperty Name="MileageAtDeparture" ColumnName="MileageAtDeparture" />
+          <ScalarProperty Name="MileageOnArrival" ColumnName="MileageOnArrival" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MarkerID" ColumnName="MarkerID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="AssociatedDriver" ColumnName="AssociatedDriver" />
+          <ScalarProperty Name="PlateNo" ColumnName="PlateNo" />
+          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+          <ScalarProperty Name="LicenseExprDate" ColumnName="LicenseExprDate" />
+          <ScalarProperty Name="InsuranceNo" ColumnName="InsuranceNo" />
+          <ScalarProperty Name="InsuranceExprDate" ColumnName="InsuranceExprDate" />
+          <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+          <ScalarProperty Name="TrackerCompany" ColumnName="TrackerCompany" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleIncidenceTypes">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.VehicleIncidenceType">
+        <MappingFragment StoreEntitySet="VehicleIncidenceType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleMakers">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.VehicleMaker">
+        <MappingFragment StoreEntitySet="VehicleMaker">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleTypes">
+      <EntityTypeMapping TypeName="FleetMgtSysDBModel.VehicleType">
+        <MappingFragment StoreEntitySet="VehicleType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

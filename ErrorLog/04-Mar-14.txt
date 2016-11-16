@@ -1,0 +1,45 @@
+
+Log Entry : 
+03/04/2014 12:55:24
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/04/2014 13:00:09
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Cannot access a closed file.
+__________________________
+
+Log Entry : 
+03/04/2014 13:05:36
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Error: The entity or complex type 'FleetMgtSysDBModel.Department' cannot be constructed in a LINQ to Entities query.
+__________________________
+
+Log Entry : 
+03/04/2014 13:13:22
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Error: The entity or complex type 'FleetMgtSysDBModel.Department' cannot be constructed in a LINQ to Entities query.
+__________________________
+
+Log Entry : 
+03/04/2014 14:07:51
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/04/2014 14:10:39
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/04/2014 14:13:20
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/04/2014 14:23:24
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+03/04/2014 14:24:28
+Error in: http://localhost:24949/BackOffice/ManageDept.aspx. Error Message:Cannot access a closed file.
+__________________________

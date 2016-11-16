@@ -1,0 +1,27 @@
+
+Log Entry : 
+03/26/2014 04:29:27
+Error in: http://localhost:1389/Login.aspx. Error Message:Error: System.Net.Sockets.SocketException (0x80004005): A socket operation was attempted to an unreachable host 172.20.10.8:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+__________________________
+
+Log Entry : 
+03/26/2014 09:04:42
+Error in: http://localhost:1389/BackOffice/ManageVehicle.aspx?stat=2. Error Message:Error: The data source does not support server-side data paging.
+__________________________
+
+Log Entry : 
+03/26/2014 11:24:02
+Error in: http://localhost:1389/BackOffice/ManageIncidence.aspx. Error Message:Error: The entity or complex type 'FleetMgtSysDBModel.Vehicle' cannot be constructed in a LINQ to Entities query.
+__________________________
+
+Log Entry : 
+03/26/2014 11:26:04
+Error in: http://localhost:1389/BackOffice/ManageIncidence.aspx. Error Message:Error: A specified Include path is not valid. The EntityType 'FleetMgtSysDBModel.IncidentLog' does not declare a navigation property with the name 'Vehicle'.
+__________________________
+
+Log Entry : 
+03/26/2014 11:28:27
+Error in: http://localhost:1389/BackOffice/ManageIncidence.aspx. Error Message:Error: A specified Include path is not valid. The EntityType 'FleetMgtSysDBModel.IncidentLog' does not declare a navigation property with the name 'Vehicle'.
+__________________________

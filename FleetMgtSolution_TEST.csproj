@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C229E49-5CD0-49FA-9F4C-1FE65FF126CA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FleetMgtSolution</RootNamespace>
+    <AssemblyName>FleetMgtSolution</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\AmconAuctions\AmconAuctions\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\AmconAuctions\AmconAuctions\bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\AmconAuctions\AmconAuctions\bin\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\10.0.0.0__b03f5f7f11d50a3a\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="BackOffice\DashBoard.aspx" />
+    <Content Include="BackOffice\DriversEmployerSetup.aspx" />
+    <Content Include="BackOffice\EmailTemplates\HeadDriverNotification.htm" />
+    <Content Include="BackOffice\EmailTemplates\NewUserCreated.htm" />
+    <Content Include="BackOffice\EmailTemplates\RequestCancelledNotification.htm" />
+    <Content Include="BackOffice\EmailTemplates\RequestDeclinedNotification.htm" />
+    <Content Include="BackOffice\EmailTemplates\RequestOnHoldNotification.htm" />
+    <Content Include="BackOffice\EmailTemplates\RequestorStatusNotification.htm" />
+    <Content Include="BackOffice\EmailTemplates\VehicleAssignedNotification.htm" />
+    <Content Include="BackOffice\FleetLocationLookup.aspx" />
+    <Content Include="BackOffice\FleetRequestDetail.aspx" />
+    <Content Include="BackOffice\IncidentType.aspx" />
+    <Content Include="BackOffice\InsuranceCoySetup.aspx" />
+    <Content Include="BackOffice\LookUpForms.aspx" />
+    <Content Include="BackOffice\ManageDept.aspx" />
+    <Content Include="BackOffice\ManageDriver.aspx" />
+    <Content Include="BackOffice\ManageFleetRequest.aspx" />
+    <Content Include="BackOffice\ManageIncidence.aspx" />
+    <Content Include="BackOffice\ManageVehicle.aspx" />
+    <Content Include="BackOffice\ReportHome.aspx" />
+    <Content Include="BackOffice\TrackerCompanySetup.aspx" />
+    <Content Include="BackOffice\UserDetail.aspx" />
+    <Content Include="BackOffice\UserSetup.aspx" />
+    <Content Include="BackOffice\VehicleDetail.aspx" />
+    <Content Include="BackOffice\VehicleMaker.aspx" />
+    <Content Include="BackOffice\VehicleTypePage.aspx" />
+    <Content Include="Controls\easySteps.ascx" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap-timepicker.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\login-box.css" />
+    <Content Include="css\ModelPopup.css" />
+    <Content Include="css\responsiveslides.css" />
+    <Content Include="css\style.css" />
+    <Content Include="EmailTemplates\ApprovalNotification.htm" />
+    <Content Include="EmailTemplates\FleetManagerNotification.htm" />
+    <Content Include="EmailTemplates\RequestCancelledNotification.htm" />
+    <Content Include="EmailTemplates\RequestDeclinedNotification.htm" />
+    <Content Include="EmailTemplates\RequestorStatusNotification.htm" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\3.jpg" />
+    <Content Include="img\AmconLogoTrans.png" />
+    <Content Include="img\asdasdasd.jpg" />
+    <Content Include="img\banner-next.png" />
+    <Content Include="img\banner-prev.png" />
+    <Content Include="img\bid.png" />
+    <Content Include="img\browse.png" />
+    <Content Include="img\cal.gif" />
+    <Content Include="img\delete-icon.png" />
+    <Content Include="img\download-icon.png" />
+    <Content Include="img\easyfleet2.png" />
+    <Content Include="img\easyfleet2_min.png" />
+    <Content Include="img\easyFleetLogo.png" />
+    <Content Include="img\edit_icon.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\headerBG.png" />
+    <Content Include="img\inner-bg-icon.png" />
+    <Content Include="img\list-icon.png" />
+    <Content Include="img\loadinfo.gif" />
+    <Content Include="img\login-box-backg.png" />
+    <Content Include="img\login-btn.png" />
+    <Content Include="img\LoginBg.jpg" />
+    <Content Include="img\logo-mobile.png" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\mobile-nav.png" />
+    <Content Include="img\register.png" />
+    <Content Include="img\slide1.jpg" />
+    <Content Include="img\slide2.jpg" />
+    <Content Include="img\slide3.jpg" />
+    <Content Include="img\slide4.jpg" />
+    <Content Include="img\slide5.jpg" />
+    <Content Include="img\view_icon.png" />
+    <Content Include="index.html" />
+    <Content Include="js\action.js" />
+    <Content Include="js\bootstrap-timepicker.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\responsiveslides.js" />
+    <Content Include="js\responsiveslides.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <None Include="Report\FleetMgtSysDBDataSet.xsc">
+      <DependentUpon>FleetMgtSysDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\FleetMgtSysDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FleetMgtSysDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\FleetMgtSysDBDataSet.xss">
+      <DependentUpon>FleetMgtSysDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ADAuth\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ADAuth\Service.disco" />
+    <Content Include="MyFleetRequest.aspx" />
+    <Content Include="Report\FleetUtilizationReport.aspx" />
+    <Content Include="Report\FMSVehUtilizationReport.aspx" />
+    <Content Include="Report\TripLogReport1.aspx" />
+    <Content Include="Report\VehDetailReport.aspx" />
+    <Content Include="Report\VehicleLogReport.aspx" />
+    <Content Include="RequestApproval.aspx" />
+    <Content Include="RequestApprovalList.aspx" />
+    <Content Include="RequestDetail.aspx" />
+    <Content Include="SuccessRequest.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\DriversEmployerSetup.aspx.cs">
+      <DependentUpon>DriversEmployerSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\DriversEmployerSetup.aspx.designer.cs">
+      <DependentUpon>DriversEmployerSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\FleetLocationLookup.aspx.cs">
+      <DependentUpon>FleetLocationLookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\FleetLocationLookup.aspx.designer.cs">
+      <DependentUpon>FleetLocationLookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\FleetRequestDetail.aspx.cs">
+      <DependentUpon>FleetRequestDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\FleetRequestDetail.aspx.designer.cs">
+      <DependentUpon>FleetRequestDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\IncidentType.aspx.cs">
+      <DependentUpon>IncidentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\IncidentType.aspx.designer.cs">
+      <DependentUpon>IncidentType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\InsuranceCoySetup.aspx.cs">
+      <DependentUpon>InsuranceCoySetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\InsuranceCoySetup.aspx.designer.cs">
+      <DependentUpon>InsuranceCoySetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\LookUpForms.aspx.cs">
+      <DependentUpon>LookUpForms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\LookUpForms.aspx.designer.cs">
+      <DependentUpon>LookUpForms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\ManageDept.aspx.cs">
+      <DependentUpon>ManageDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\ManageDept.aspx.designer.cs">
+      <DependentUpon>ManageDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\ManageDriver.aspx.cs">
+      <DependentUpon>ManageDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\ManageDriver.aspx.designer.cs">
+      <DependentUpon>ManageDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\ManageFleetRequest.aspx.cs">
+      <DependentUpon>ManageFleetRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\ManageFleetRequest.aspx.designer.cs">
+      <DependentUpon>ManageFleetRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\ManageIncidence.aspx.cs">
+      <DependentUpon>ManageIncidence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\ManageIncidence.aspx.designer.cs">
+      <DependentUpon>ManageIncidence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\ManageVehicle.aspx.cs">
+      <DependentUpon>ManageVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\ManageVehicle.aspx.designer.cs">
+      <DependentUpon>ManageVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\ReportHome.aspx.cs">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\ReportHome.aspx.designer.cs">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\SiteAdmin.Master.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\SiteAdmin.Master.designer.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\TrackerCompanySetup.aspx.cs">
+      <DependentUpon>TrackerCompanySetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\TrackerCompanySetup.aspx.designer.cs">
+      <DependentUpon>TrackerCompanySetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\UserDetail.aspx.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\UserDetail.aspx.designer.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\UserSetup.aspx.cs">
+      <DependentUpon>UserSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\UserSetup.aspx.designer.cs">
+      <DependentUpon>UserSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\VehicleDetail.aspx.cs">
+      <DependentUpon>VehicleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\VehicleDetail.aspx.designer.cs">
+      <DependentUpon>VehicleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\VehicleMaker.aspx.cs">
+      <DependentUpon>VehicleMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\VehicleMaker.aspx.designer.cs">
+      <DependentUpon>VehicleMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\VehicleTypePage.aspx.cs">
+      <DependentUpon>VehicleTypePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\VehicleTypePage.aspx.designer.cs">
+      <DependentUpon>VehicleTypePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Batch.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\DepartmentBLL.cs" />
+    <Compile Include="BLL\DriverBLL.cs" />
+    <Compile Include="BLL\IncidenceBLL.cs" />
+    <Compile Include="BLL\LookUpBLL.cs" />
+    <Compile Include="BLL\TripBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Utility.cs" />
+    <Compile Include="BLL\VehicleBLL.cs" />
+    <Compile Include="Controls\easySteps.ascx.cs">
+      <DependentUpon>easySteps.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\easySteps.ascx.designer.cs">
+      <DependentUpon>easySteps.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Driver.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DriverEmployer.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FleetLocation.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FleetMgt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FleetMgt.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetMgtSys.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FleetMgtSys.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FleetMgtSys.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DAL\DBAccess.cs" />
+    <Compile Include="Report\FleetMgtSysDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FleetMgtSysDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentLog.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceCompany.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFleetRequest.aspx.cs">
+      <DependentUpon>MyFleetRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFleetRequest.aspx.designer.cs">
+      <DependentUpon>MyFleetRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FleetUtilizationReport.aspx.cs">
+      <DependentUpon>FleetUtilizationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\FleetUtilizationReport.aspx.designer.cs">
+      <DependentUpon>FleetUtilizationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FMSVehUtilizationReport.aspx.cs">
+      <DependentUpon>FMSVehUtilizationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\FMSVehUtilizationReport.aspx.designer.cs">
+      <DependentUpon>FMSVehUtilizationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TripLogReport1.aspx.cs">
+      <DependentUpon>TripLogReport1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\TripLogReport1.aspx.designer.cs">
+      <DependentUpon>TripLogReport1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\VehDetailReport.aspx.cs">
+      <DependentUpon>VehDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\VehDetailReport.aspx.designer.cs">
+      <DependentUpon>VehDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\VehicleLogReport.aspx.cs">
+      <DependentUpon>VehicleLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\VehicleLogReport.aspx.designer.cs">
+      <DependentUpon>VehicleLogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestApproval.aspx.cs">
+      <DependentUpon>RequestApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestApproval.aspx.designer.cs">
+      <DependentUpon>RequestApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestApprovalList.aspx.cs">
+      <DependentUpon>RequestApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestApprovalList.aspx.designer.cs">
+      <DependentUpon>RequestApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestDetail.aspx.cs">
+      <DependentUpon>RequestDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestDetail.aspx.designer.cs">
+      <DependentUpon>RequestDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SmsNotification.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessRequest.aspx.cs">
+      <DependentUpon>SuccessRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuccessRequest.aspx.designer.cs">
+      <DependentUpon>SuccessRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackerCompany.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trip.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleIncidenceType.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMaker.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleType.cs">
+      <DependentUpon>FleetMgtSys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ADAuth\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ErrorLog\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BackOffice\SiteAdmin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="FleetMgt.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FleetMgt.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FleetMgtSys.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FleetMgtSys.Context.cs</LastGenOutput>
+    </None>
+    <None Include="FleetMgtSys.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FleetMgtSys.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ADAuth\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.20.10.8/AMCONService/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ADAuth\</RelPath>
+      <UpdateFromURL>http://172.20.10.8/AMCONService/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FleetMgtSolution_ADAuth_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Report\VehicleLogReport.rdlc" />
+    <Content Include="Report\VehicleDetailReport.rdlc" />
+    <Content Include="Report\FMSVehicleUtilizationRpt.rdlc" />
+    <Content Include="Report\FMSUtilizationRpt.rdlc" />
+    <Content Include="Report\TripReport.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15893</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

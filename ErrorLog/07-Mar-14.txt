@@ -1,0 +1,40 @@
+
+Log Entry : 
+03/07/2014 15:17:41
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.Vehicle_AF1CF05F08BA6270CE4AB4DC05E4A21A3523C74E841A4DF60C698D62C7836EE6' does not contain a property with the name 'MakerID'.
+__________________________
+
+Log Entry : 
+03/07/2014 15:22:53
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+03/07/2014 15:24:22
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+03/07/2014 15:26:39
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+03/07/2014 15:28:05
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: A field or property with the name 'PlatNo' was not found on the selected data source.
+__________________________
+
+Log Entry : 
+03/07/2014 15:29:13
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.Vehicle_AF1CF05F08BA6270CE4AB4DC05E4A21A3523C74E841A4DF60C698D62C7836EE6' does not contain a property with the name 'VehicleAssociate'.
+__________________________
+
+Log Entry : 
+03/07/2014 16:24:25
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: Input string was not in a correct format.
+__________________________
+
+Log Entry : 
+03/07/2014 16:26:24
+Error in: http://localhost:16591/BackOffice/ManageVehicle.aspx. Error Message:Error: String was not recognized as a valid DateTime.
+__________________________

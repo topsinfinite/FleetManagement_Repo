@@ -1,0 +1,95 @@
+
+Log Entry : 
+04/01/2014 09:43:39
+Error in: http://localhost:34694/RequestApprovalList.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+04/01/2014 09:43:40
+Error in: http://localhost:34694/RequestApprovalList.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+04/01/2014 09:43:47
+Error in: http://localhost:34694/RequestApproval.aspx?id=9. Error Message:Error: 
+__________________________
+
+Log Entry : 
+04/01/2014 13:50:58
+Error in: http://localhost:34694/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+04/01/2014 15:16:32
+Error in: http://localhost:34694/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+04/01/2014 19:27:16
+Error in: http://localhost:34694/Login.aspx. Error Message:Error Msg: An error occurred while executing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+04/01/2014 19:27:17
+Error in: http://localhost:34694/Login.aspx. Error Message:Error: System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'isHoD'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<>c__DisplayClassb.<Reader>b__8()
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TInterceptionContext,TResult](Func`1 operation, TInterceptionContext interceptionContext, Action`1 executing, Action`1 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:b31779c1-58f0-4f09-9d59-2bbd40f43453
+__________________________
+
+Log Entry : 
+04/01/2014 19:27:55
+Error in: http://localhost:34694/Login.aspx. Error Message:Error Msg: An error occurred while executing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+04/01/2014 19:29:45
+Error in: http://localhost:34694/Login.aspx. Error Message:Error Msg: An error occurred while executing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+04/01/2014 19:29:45
+Error in: http://localhost:34694/Login.aspx. Error Message:Error: System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'isHoD'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<>c__DisplayClassb.<Reader>b__8()
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TInterceptionContext,TResult](Func`1 operation, TInterceptionContext interceptionContext, Action`1 executing, Action`1 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+ClientConnectionId:b31779c1-58f0-4f09-9d59-2bbd40f43453
+__________________________
+
+Log Entry : 
+04/01/2014 19:44:24
+Error in: http://localhost:34694/BackOffice/DashBoard.aspx. Error Message:Error Msg: An error occurred while executing the command definition. See the inner exception for details.
+__________________________

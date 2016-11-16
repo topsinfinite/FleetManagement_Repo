@@ -1,0 +1,43 @@
+
+Log Entry : 
+08/12/2014 11:15:32
+Error in: http://localhost:15893/BackOffice/ManageFleetRequest.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/12/2014 11:15:45
+Error in: http://localhost:15893/BackOffice/ManageFleetRequest.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/12/2014 11:20:11
+Error in: http://localhost:15893/BackOffice/ManageFleetRequest.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/12/2014 13:31:29
+Error in: http://localhost:15893/BackOffice/VehicleDetail.aspx?id=1. Error Message:Error: System.ObjectDisposedException: The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.
+   at System.Data.Entity.Core.Objects.ObjectContext.get_Connection()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.Execute(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Load(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load()
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.DeferredLoad()
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.LoadProperty[TItem](TItem propertyValue, String relationshipName, String targetRoleName, Boolean mustBeNull, Object wrapperObject)
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.<>c__DisplayClass7`2.<GetInterceptorDelegate>b__2(TProxy proxy, TItem item)
+   at System.Data.Entity.DynamicProxies.Vehicle_03A442B53E927CEE4C3C3AB6AD8261FA08CD28C1B7FEDA9B7922CDEB61FCFDA1.get_InsuranceCompany1()
+__________________________
+
+Log Entry : 
+08/12/2014 13:31:47
+Error in: http://localhost:15893/BackOffice/VehicleDetail.aspx?id=2. Error Message:Error: System.ObjectDisposedException: The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.
+   at System.Data.Entity.Core.Objects.ObjectContext.get_Connection()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.Execute(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Load(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load()
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.DeferredLoad()
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.LoadProperty[TItem](TItem propertyValue, String relationshipName, String targetRoleName, Boolean mustBeNull, Object wrapperObject)
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.<>c__DisplayClass7`2.<GetInterceptorDelegate>b__2(TProxy proxy, TItem item)
+   at System.Data.Entity.DynamicProxies.Vehicle_03A442B53E927CEE4C3C3AB6AD8261FA08CD28C1B7FEDA9B7922CDEB61FCFDA1.get_InsuranceCompany1()
+__________________________
